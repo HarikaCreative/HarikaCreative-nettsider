@@ -41,6 +41,7 @@ const PackageModal: React.FC<PackageModalProps> = ({ isOpen, onClose, packageTyp
         'Google Analytics: 1.300 kr',
         'Ekstra språk: 2.500 kr/språk'
       ],
+      perfectFor: [],
       deliveryTime: '2-3 uker'
     },
     pluss: {
