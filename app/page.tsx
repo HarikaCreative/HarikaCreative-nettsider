@@ -24,7 +24,7 @@ export default function HomePage() {
       <Hero
         title="Fra gjemt perle til gjestenes førstevalg"
         subtitle="Hárika Creative"
-        description="Din hytte fortjener en nettside som viser frem det den virkelig er — ikke bare et sted å sove, men en opplevelse verdt å huske. Jeg lager nettsider for norske hytter og feriehus som både ser vakre ut OG får gjestene til å booke."
+        description="Din hytte fortjener en nettside som viser frem det den virkelig er — ikke bare et sted å sove, men med opplevelser verdt å huske. Jeg lager nettsider for norske hytter og feriehus som både ser vakre ut OG får gjestene til å booke."
         primaryCTA={{
           text: "Ta en uforpliktende prat",
           href: "#contact"
@@ -49,11 +49,6 @@ export default function HomePage() {
             alt: "DNT fjellskilt med turstier i norsk fjelllandskap",
             priority: false
           },
-          {
-            src: "/images/hero/DNT-guiding-mountains-hero.webp",
-            alt: "DNT guiding i norske fjell",
-            priority: false
-          }
         ]}
         imageRotationInterval={5000}
         variant="split"
@@ -65,10 +60,10 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-h1 font-display text-nordic-pine mb-6">
-              En hytte er mer enn fire vegger — det er en opplevelse som fortjener riktig presentasjon
+              En hytte er mer enn fire vegger — det er autensitet som fortjener riktig presentasjon
             </h2>
             <p className="text-body-lg text-nordic-slate/80">
-              En egen nettside gir deg kontroll, synlighet og troverdighet — og gjør det enkelt for gjester å velge nettopp din hytte.
+              En egen nettside gir deg kontroll, synlighet og troverdighet — og gjør det enklere for gjester å velge nettopp din hytte.
             </p>
           </div>
 
@@ -108,7 +103,7 @@ export default function HomePage() {
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Internasjonale gjester</h3>
               <p className="text-body-xs text-nordic-forest/60 font-semibold mb-2">3 språk inkludert</p>
               <p className="text-body-md text-nordic-slate/70">
-                Tyske, nederlandske og engelske gjester får informasjonen de trenger — på sitt eget språk.
+                Engelsktalende og tysktalende gjester får informasjonen de trenger — i tillegg til norsk side.
               </p>
             </div>
 
@@ -134,7 +129,7 @@ export default function HomePage() {
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Lynrask lasting</h3>
               <p className="text-body-xs text-nordic-fjord/60 font-semibold mb-2">&lt; 2 sek lastetid</p>
               <p className="text-body-md text-nordic-slate/70">
-                Optimalisert for mobil og dårlig dekning. Perfekt for hytteområder med begrenset nett.
+                Optimalisert for mobil og mulig dårlig dekning. Perfekt for hytteområder med begrenset nett.
               </p>
             </div>
 
@@ -172,7 +167,7 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Hytte Basic</CardTitle>
                 <CardDescription>
-                  For private hytteeiere
+                  For private hytteeiere og feriehjem
                 </CardDescription>
                 <div className="mt-4">
                   <p className="text-body-xs text-nordic-slate/60 mb-1">Fra</p>
@@ -449,7 +444,7 @@ export default function HomePage() {
                     Vi snakker sammen
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Du forteller om hytten din, målgruppen og hva du ønsker å oppnå. Jeg lytter, stiller de riktige spørsmålene og lager en klar plan. Ingen teknisk sjargong — bare en normal samtale om hva som skal til.
+                    Du forteller om stedet ditt, tanker om målgruppen og hva du ønsker å oppnå. Jeg lytter, stiller de spørsmålene du kanskje ikke har tenkt på og lager en klar plan. Ingen teknisk sjargong — bare en normal samtale om hva som skal til.
                   </p>
                 </div>
               </div>
@@ -519,7 +514,7 @@ export default function HomePage() {
                   Jeg heter Marianna, og jeg hjelper hytteeiere og små reiselivsbedrifter over hele Norge med å skape nettsider som både ser vakre ut og faktisk fungerer.
                 </p>
                 <p>
-                  Med bakgrunn fra digital markedsføring (Noroff, 2020–2022) og erfaring fra både Norge og Hellas, forstår jeg hva som skal til for å lage nettsider som gjør jobben sin — ikke bare fyller en plass på nettet.
+                  Med bakgrunn fra digital markedsføring (Noroff, 2020–2022), utleie og service fra både Norge og Hellas, forstår jeg hva som skal til for å lage nettsider som gjør jobben sin — ikke bare fyller en plass på nettet.
                 </p>
                 <p>
                   For meg handler en god nettside om mer enn design:
@@ -542,7 +537,7 @@ export default function HomePage() {
                   Jeg jobber strukturert, kommuniserer tydelig og leverer alltid det jeg lover — noe kundene mine setter stor pris på.
                 </p>
                 <p className="font-semibold">
-                  Målet mitt er enkelt: Å gjøre din hytte synlig, troverdig og enkel å booke.
+                  Målet mitt er enkelt: Å gjøre ditt sted synlig, troverdig og enkelt å booke.
                 </p>
                 <p className="text-body-md opacity-75">
                   Basert i Asker, jobber jeg med hytteeiere og reiselivsbedrifter i hele Norge.
@@ -622,7 +617,7 @@ export default function HomePage() {
               Mulighetene er mange
             </h2>
             <p className="text-body-xl mb-10 opacity-95">
-              Se eksempler på mitt arbeid — fra luksusvillaer på Kreta til retreatsenter og cateringtjenester.
+              Se eksempel på mitt arbeid — fra luksusvillaer på Kreta til den klassiske Sørlandshytta.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
