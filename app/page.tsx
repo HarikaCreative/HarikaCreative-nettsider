@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Hero from '@/components/sections/Hero'
 import ContactForm from '@/components/sections/ContactForm'
+import TestimonialCarousel from '@/components/sections/TestimonialCarousel'
 import PackageModal, { PackageType } from '@/components/ui/PackageModal'
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
@@ -21,22 +22,27 @@ export default function HomePage() {
     <main className="min-h-screen">
       {/* HERO SECTION - ROTERENDE BILDER */}
       <Hero
-        title="Nettsider for hytter, feriehus og små reiselivsbedrifter i Norge"
+        title="Fra gjemt perle til gjestenes førstevalg"
         subtitle="Hárika Creative"
-        description="Jeg hjelper hytteeiere og små reiselivsbedrifter med å lage nettsider som tiltrekker de riktige gjestene — med nordisk estetikk, sterk struktur og fokus på enkelhet."
+        description="Din hytte fortjener en nettside som viser frem det den virkelig er — ikke bare et sted å sove, men en opplevelse verdt å huske. Jeg lager nettsider for norske hytter og feriehus som både ser vakre ut OG får gjestene til å booke."
         primaryCTA={{
-          text: "Kontakt meg",
+          text: "Ta en uforpliktende prat",
           href: "#contact"
         }}
         secondaryCTA={{
-          text: "Se pakker",
-          href: "#services"
+          text: "Se hvordan det fungerer",
+          href: "#how-it-works"
         }}
         images={[
           {
+            src: "/images/hero/IMG_0234-hero.webp",
+            alt: "Norsk fjellhytte i vintersetting med snø",
+            priority: true
+          },
+          {
             src: "/images/hero/20210721_145857-hero.webp",
             alt: "Spektakulært norsk fjordlandskap med strand og grønne åser",
-            priority: true
+            priority: false
           },
           {
             src: "/images/hero/DNT-mountain-sign-hero.webp",
@@ -59,10 +65,10 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-h1 font-display text-nordic-pine mb-6">
-              Hvorfor din hytte trenger egen nettside
+              En hytte er mer enn fire vegger — det er en opplevelse som fortjener riktig presentasjon
             </h2>
             <p className="text-body-lg text-nordic-slate/80">
-              En hytte er mer enn et sted å bo. Det er en opplevelse.
+              En egen nettside gir deg kontroll, synlighet og troverdighet — og gjør det enkelt for gjester å velge nettopp din hytte.
             </p>
           </div>
 
@@ -74,20 +80,22 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Bedre synlighet</h3>
+              <p className="text-body-xs text-nordic-pine/60 font-semibold mb-2">Topp 5 på Google</p>
               <p className="text-body-md text-nordic-slate/70">
-                Høyere rangering i søkemotorer. Gjester finner deg lettere.
+                Lokal SEO gjør at gjester finner deg når de søker etter hytter i ditt område — uten at du betaler for annonser.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-nordic-fjord/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-nordic-fjord" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-h5 font-display text-nordic-slate mb-3">Flere direkte henvendelser</h3>
+              <h3 className="text-h5 font-display text-nordic-slate mb-3">Flere direkte bookinger</h3>
+              <p className="text-body-xs text-nordic-fjord/60 font-semibold mb-2">Spar 15-25% provisjon</p>
               <p className="text-body-md text-nordic-slate/70">
-                Reduser avhengighet av plattformer. Øk kontroll og fortjeneste.
+                Reduser avhengighet av Airbnb og Booking.com. Behold mer av inntekten selv.
               </p>
             </div>
 
@@ -98,20 +106,22 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Internasjonale gjester</h3>
+              <p className="text-body-xs text-nordic-forest/60 font-semibold mb-2">3 språk inkludert</p>
               <p className="text-body-md text-nordic-slate/70">
-                Flerspråklig innhold. Klar informasjon for tyske og nederlandske turister.
+                Tyske, nederlandske og engelske gjester får informasjonen de trenger — på sitt eget språk.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-nordic-pine/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-nordic-pine" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                 </svg>
               </div>
-              <h3 className="text-h5 font-display text-nordic-slate mb-3">Sterkere identitet</h3>
+              <h3 className="text-h5 font-display text-nordic-slate mb-3">Din merkevare</h3>
+              <p className="text-body-xs text-nordic-pine/60 font-semibold mb-2">Din identitet</p>
               <p className="text-body-md text-nordic-slate/70">
-                Din egen merkevare. Full kontroll over hvordan hytten presenteres.
+                Ikke en standard mal. Dine bilder, din historie, dine verdier — presentert på din måte.
               </p>
             </div>
 
@@ -122,8 +132,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Lynrask lasting</h3>
+              <p className="text-body-xs text-nordic-fjord/60 font-semibold mb-2">&lt; 2 sek lastetid</p>
               <p className="text-body-md text-nordic-slate/70">
-                Perfekt ytelse. Bedre brukeropplevelse. Høyere konvertering.
+                Optimalisert for mobil og dårlig dekning. Perfekt for hytteområder med begrenset nett.
               </p>
             </div>
 
@@ -134,8 +145,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Full kontroll</h3>
+              <p className="text-body-xs text-nordic-forest/60 font-semibold mb-2">Dine regler</p>
               <p className="text-body-md text-nordic-slate/70">
-                Ditt innhold. Dine priser. Dine vilkår. Ingen mellommenn.
+                Dine priser. Dine vilkår. Ditt innhold. Ingen mellommenn som endrer spillereglene.
               </p>
             </div>
           </div>
@@ -164,13 +176,13 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="mt-4">
                   <p className="text-body-xs text-nordic-slate/60 mb-1">Fra</p>
-                  <p className="text-display-md font-display font-bold text-nordic-pine">12.900 kr</p>
+                  <p className="text-display-md font-display font-bold text-nordic-pine">14.900 kr</p>
                   <p className="text-body-xs text-nordic-slate/60">eks. mva</p>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-body-md text-nordic-slate/80 mb-6">
-                  En ren, moderne nettside for én hytte eller feriehus. Perfekt for eiere som vil ha noe enkelt og profesjonelt.
+                  Den rene, profesjonelle nettsiden — perfekt for deg som vil ha noe enkelt som fungerer.
                 </p>
                 
                 <div className="space-y-3 mb-8">
@@ -249,7 +261,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-body-md text-nordic-slate/80 mb-6">
-                  For eiere som ønsker mer funksjonalitet og synlighet. Inkluderer booking og flerspråklig oppsett.
+                  Den komplette løsningen — for deg som ønsker mer funksjonalitet, bedre synlighet og booking.
                 </p>
                 
                 <div className="space-y-3 mb-8">
@@ -323,13 +335,13 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="mt-4">
                   <p className="text-body-xs text-nordic-slate/60 mb-1">Fra</p>
-                  <p className="text-display-md font-display font-bold text-nordic-forest">42.900 kr</p>
+                  <p className="text-display-md font-display font-bold text-nordic-forest">49.900 kr</p>
                   <p className="text-body-xs text-nordic-slate/60">eks. mva</p>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-body-md text-nordic-slate/80 mb-6">
-                  For små reiselivsbedrifter med flere enheter. Fullstendig visuell identitet og booking-flyt.
+                  Den fullstendige digitale identiteten — for små reiselivsbedrifter med flere enheter og større ambisjoner.
                 </p>
                 
                 <div className="space-y-3 mb-8">
@@ -404,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-24 bg-white relative">
+      <section id="how-it-works" className="py-24 bg-white relative">
         <div className="absolute inset-0 z-0 opacity-5">
           <Image
             src="/images/optimized/20220722_135351.webp"
@@ -437,7 +449,7 @@ export default function HomePage() {
                     Vi snakker sammen
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Du forteller om hytten din, målgruppen, og hva du ønsker å oppnå. Jeg lytter, stiller spørsmål, og lager en plan.
+                    Du forteller om hytten din, målgruppen og hva du ønsker å oppnå. Jeg lytter, stiller de riktige spørsmålene og lager en klar plan. Ingen teknisk sjargong — bare en normal samtale om hva som skal til.
                   </p>
                 </div>
               </div>
@@ -450,10 +462,10 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-h4 font-display text-nordic-slate mb-3">
-                    Jeg designer
+                    Jeg designer og bygger
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Jeg lager en ren, moderne nettside med nordisk estetikk. Fokus på rask lasting, enkel navigasjon, og tydelig informasjon.
+                    Jeg lager en ren, rask nettside med nordisk estetikk. Fokus på enkel navigasjon, rask lasting, tydelig informasjon og vakre bilder — dine bilder, optimalisert.
                   </p>
                 </div>
               </div>
@@ -469,7 +481,7 @@ export default function HomePage() {
                     Du godkjenner
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Du får se nettstedet, gir tilbakemelding, og vi justerer til det er perfekt. Din godkjenning er avgjørende.
+                    Du får se nettsiden, gir tilbakemelding og vi justerer til alt føles riktig. Din godkjenning er avgjørende — ingenting publiseres før du er 100% fornøyd.
                   </p>
                 </div>
               </div>
@@ -485,7 +497,7 @@ export default function HomePage() {
                     Du går live
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Nettstedet publiseres, gjester finner deg, og du begynner å motta henvendelser. Jeg er tilgjengelig for support.
+                    Nettsiden publiseres, gjestene begynner å finne deg og bookingene starter. Jeg er tilgjengelig for support og spørsmål — du er aldri alene.
                   </p>
                 </div>
               </div>
@@ -500,17 +512,40 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div>
               <h2 className="text-h2 font-display mb-6">
-                Hárika Creative
+                Om meg
               </h2>
               <div className="space-y-4 text-body-lg opacity-90 mb-8">
                 <p>
-                  Jeg kombinerer design, struktur og en dyp forståelse for reiseliv og hytteutleie.
+                  Jeg heter Marianna, og jeg hjelper hytteeiere og små reiselivsbedrifter over hele Norge med å skape nettsider som både ser vakre ut og faktisk fungerer.
                 </p>
                 <p>
-                  Med bakgrunn fra digital markedsføring (Noroff, 2020–2022) og erfaring fra både Norge og Hellas, forstår jeg hva som skal til for å lage nettsider som fungerer — ikke bare ser bra ut.
+                  Med bakgrunn fra digital markedsføring (Noroff, 2020–2022) og erfaring fra både Norge og Hellas, forstår jeg hva som skal til for å lage nettsider som gjør jobben sin — ikke bare fyller en plass på nettet.
                 </p>
                 <p>
-                  Målet mitt er enkelt: å gjøre din hytte synlig, troverdig og enkel å booke.
+                  For meg handler en god nettside om mer enn design:
+                </p>
+                <ul className="space-y-2 ml-6">
+                  <li className="flex items-start gap-2">
+                    <span className="text-nordic-forest-light mt-1">✓</span>
+                    <span>Den skal gi trygghet (gjestene føler seg trygge på å booke)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-nordic-forest-light mt-1">✓</span>
+                    <span>Den skal skape tillit (profesjonell og pålitelig)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-nordic-forest-light mt-1">✓</span>
+                    <span>Den skal være enkel (både for deg og gjestene dine)</span>
+                  </li>
+                </ul>
+                <p>
+                  Jeg jobber strukturert, kommuniserer tydelig og leverer alltid det jeg lover — noe kundene mine setter stor pris på.
+                </p>
+                <p className="font-semibold">
+                  Målet mitt er enkelt: Å gjøre din hytte synlig, troverdig og enkel å booke.
+                </p>
+                <p className="text-body-md opacity-75">
+                  Basert i Asker, jobber jeg med hytteeiere og reiselivsbedrifter i hele Norge.
                 </p>
               </div>
 
@@ -532,6 +567,22 @@ export default function HomePage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS SECTION */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-h1 font-display text-nordic-pine mb-6">
+              Hva kundene mine sier
+            </h2>
+            <p className="text-body-lg text-nordic-slate/80 max-w-2xl mx-auto">
+              Jeg er stolt av å levere mer enn bare nettsider — jeg leverer trygghet, pålitelighet og resultater.
+            </p>
+          </div>
+
+          <TestimonialCarousel />
         </div>
       </section>
 

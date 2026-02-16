@@ -3,6 +3,7 @@ import { Inter, Manrope } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation'
 import CookieConsent from '@/components/sections/CookieConsent'
+import StructuredData from '@/components/seo/StructuredData'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,17 +18,57 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Hárika Creative | Nettsider for hytter og feriehus i Norge',
-  description: 'Profesjonelle nettsider for norske hytteeiere og små reiselivsbedrifter. Moderne design, rask lasting, klar for booking.',
-  keywords: ['nettsider for hytter', 'hytteutleie', 'feriehus Norge', 'reiseliv nettside', 'booking nettside'],
-  authors: [{ name: 'Marianna Harika' }],
+  title: 'Hárika Creative | Nettsider for hytter og feriehus i hele Norge',
+  description: 'Profesjonelle nettsider for private hytteeiere og små reiselivsbedrifter i Norge. Fra Asker - jobber med kunder i hele landet. Moderne design, rask lasting, SEO-optimalisert.',
+  keywords: [
+    'nettside hytteutleie Norge',
+    'booking nettside hytte',
+    'webdesign feriehus Norge',
+    'nettside for private hytteeiere',
+    'lage nettside hytte',
+    'hjemmeside feriebolig Norge',
+    'webdesigner Asker',
+    'nettside små hoteller Norge',
+    'hyttebooking nettside',
+    'webdesign Viken'
+  ],
+  authors: [{ name: 'Marianna' }],
+  creator: 'Hárika Creative',
+  publisher: 'Hárika Creative',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Hárika Creative | Nettsider for hytter i Norge',
-    description: 'Profesjonelle nettsider for hytteeiere og reiselivsbedrifter',
+    title: 'Hárika Creative | Nettsider for hytter i hele Norge',
+    description: 'Profesjonelle nettsider for private hytteeiere og små reiselivsbedrifter. Nordisk design, rask lasting, booking-løsninger.',
     url: 'https://harikacreative.com',
     siteName: 'Hárika Creative',
     locale: 'no_NO',
     type: 'website',
+    images: [
+      {
+        url: '/images/hero/IMG_0234-hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Norsk fjellhytte - Hárika Creative nettsider',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hárika Creative | Nettsider for hytter i Norge',
+    description: 'Profesjonelle nettsider for hytteeiere og reiselivsbedrifter',
+    images: ['/images/hero/IMG_0234-hero.webp'],
+  },
+  alternates: {
+    canonical: 'https://harikacreative.com',
   },
 }
 
@@ -39,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="no" className={`${inter.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased bg-white text-nordic-slate">
+        <StructuredData />
         <Navigation
           logoText="Hárika Creative"
           links={[
@@ -74,7 +116,8 @@ export default function RootLayout({
                   <a href="mailto:hello@harikacreative.com" className="block hover:text-white hover:opacity-100 transition-colors">
                     hello@harikacreative.com
                   </a>
-                  <p>Oslo, Norge</p>
+                  <p>Asker, Norge</p>
+                  <p className="mt-1 text-xs">Jobber med kunder i hele Norge</p>
                 </div>
               </div>
 

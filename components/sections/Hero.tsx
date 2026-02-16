@@ -50,21 +50,71 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   // Image rotation state
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
+  
   const imagesToShow = images || (image ? [image] : [])
   const hasMultipleImages = imagesToShow.length > 1
 
-  // Auto-rotate images
+  // Auto-rotate images (only if not paused)
   useEffect(() => {
-    if (!hasMultipleImages) return
+    if (!hasMultipleImages || isPaused) return
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % imagesToShow.length)
     }, imageRotationInterval)
 
     return () => clearInterval(interval)
-  }, [hasMultipleImages, imagesToShow.length, imageRotationInterval])
+  }, [hasMultipleImages, imagesToShow.length, imageRotationInterval, isPaused])
 
   const currentImage = imagesToShow[currentImageIndex]
+
+  // Navigation functions
+  const goToNext = () => {
+    setIsPaused(true)
+    setCurrentImageIndex((prev) => (prev + 1) % imagesToShow.length)
+    setTimeout(() => setIsPaused(false), 10000) // Resume after 10s
+  }
+
+  const goToPrevious = () => {
+    setIsPaused(true)
+    setCurrentImageIndex((prev) => (prev - 1 + imagesToShow.length) % imagesToShow.length)
+    setTimeout(() => setIsPaused(false), 10000)
+  }
+
+  const goToSlide = (index: number) => {
+    setIsPaused(true)
+    setCurrentImageIndex(index)
+    setTimeout(() => setIsPaused(false), 10000)
+  }
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const minSwipeDistance = 50
+    
+    if (Math.abs(distance) > minSwipeDistance) {
+      if (distance > 0) {
+        goToNext() // Swipe left = next
+      } else {
+        goToPrevious() // Swipe right = previous
+      }
+    }
+    
+    setTouchStart(0)
+    setTouchEnd(0)
+  }
 
   if (variant === 'split' && currentImage) {
     return (
@@ -111,7 +161,12 @@ const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Right - Image */}
-            <div className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl animate-scale-in">
+            <div 
+              className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl animate-scale-in group"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <Image
                 key={currentImageIndex}
                 src={currentImage.src}
@@ -120,6 +175,48 @@ const Hero: React.FC<HeroProps> = ({
                 priority={currentImage.priority}
                 className="object-cover transition-opacity duration-1000"
               />
+              
+              {/* Navigation Arrows (desktop only) */}
+              {hasMultipleImages && (
+                <>
+                  <button
+                    onClick={goToPrevious}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
+                    aria-label="Previous image"
+                  >
+                    <svg className="w-6 h-6 text-nordic-pine" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
+                    aria-label="Next image"
+                  >
+                    <svg className="w-6 h-6 text-nordic-pine" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  
+                  {/* Dot Indicators */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {imagesToShow.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={cn(
+                          "w-2 h-2 rounded-full transition-all",
+                          index === currentImageIndex 
+                            ? "bg-white w-8" 
+                            : "bg-white/50 hover:bg-white/75"
+                        )}
+                        aria-label={`Go to image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

@@ -16,30 +16,30 @@ const PackageModal: React.FC<PackageModalProps> = ({ isOpen, onClose, packageTyp
   const packages = {
     basic: {
       name: 'Hytte Basic',
-      price: '12.900 kr',
+      price: '14.900 kr',
       subtitle: 'For private hytteeiere',
-      description: 'En ren, moderne nettside for én hytte eller feriehus. Perfekt for eiere som vil ha noe enkelt og profesjonelt.',
+      description: 'Den rene, profesjonelle nettsiden — perfekt for deg som vil ha noe enkelt som fungerer.',
       pages: '1–5 sider',
       included: [
-        '1–5 sider (Hjem, Om, Kontakt, Galleri, Info)',
-        'Norsk (NO) + Engelsk (EN)',
-        'Profesjonell tekst & struktur',
-        'Bildeoptimalisering (inntil 20 bilder)',
+        '1–5 sider (Hjem, Om hytten, Galleri, Priser, Kontakt)',
+        'Norsk + Engelsk',
+        'Profesjonelt skrevet innhold (jeg hjelper med tekster)',
+        'Bildeoptimalisering (inntil 25 bilder)',
         'Kontaktskjema med e-postvarsel',
-        'Mobiloptimalisert design',
-        'SEO-grunnlag (meta tags, sitemap)',
-        'Cookie consent (GDPR)',
+        'Mobiloptimalisert (perfekt på mobil)',
+        'SEO-grunnlag (søkemotoroptimalisering)',
+        'Cookie-samtykke (GDPR-compliant)',
         '1 revisjonsrunde',
-        'Hosting-setup hjelp'
+        'Hosting-veiledning'
       ],
       notIncluded: [
-        'Booking-funksjon',
-        'Flere språk (3+)',
-        'CMS / admin-panel'
+        'Booking-kalender',
+        'Flere enn 2 språk',
+        'CMS (innholdsadministrasjon)'
       ],
       addons: [
-        'Google Analytics: 1.300 kr',
-        'Ekstra språk: 2.500 kr/språk'
+        'Google Analytics: 1.500 kr',
+        'Ekstra språk (DE/NL): 2.500 kr/språk'
       ],
       perfectFor: [],
       deliveryTime: '2-3 uker'
@@ -48,64 +48,68 @@ const PackageModal: React.FC<PackageModalProps> = ({ isOpen, onClose, packageTyp
       name: 'Hytte Pluss',
       price: '24.900 kr',
       subtitle: 'For profesjonell utleie',
-      description: 'For eiere som ønsker mer funksjonalitet og synlighet. Inkluderer booking og flerspråklig oppsett.',
+      description: 'Den komplette løsningen — for deg som ønsker mer funksjonalitet, bedre synlighet og booking.',
       pages: '5–15 sider',
       included: [
         'Alt fra Hytte Basic',
         '5–15 sider',
-        'Booking-kalender (iCal/Airbnb sync)',
-        '3 språk: NO + EN + DE',
-        'Avansert SEO (schema markup, geo-tags)',
-        'Lokal guide & interaktivt kart',
-        'Bildegalleri med lightbox',
-        'Google Analytics inkludert',
+        'Booking-kalender (iCal/Airbnb-synkronisering)',
+        '3 språk: Norsk + Engelsk + Tysk',
+        'Avansert SEO (schema markup, geo-tagging, søkeordoptimalisering)',
+        'Lokal guide & interaktivt kart (Google Maps)',
+        'Utvidet bildegalleri med lightbox (ubegrenset bilder)',
+        'Google Analytics oppsett + 1 måned rapportering',
         '2 revisjonsrunder',
-        'Prioritert support (1 mnd)'
+        'Prioritert support (1 måned)'
       ],
       notIncluded: [
         'Betalingsintegrasjon',
-        'CMS / admin-panel'
+        'CMS (innholdsadministrasjon)'
       ],
       addons: [
-        'Betalingsintegrasjon: 5.000 kr',
-        'CMS / admin-panel: 8.000 kr'
+        'Betalingsintegrasjon (Stripe/Vipps): 5.000 kr',
+        'CMS for selvoppdatering: 8.000 kr',
+        'Ekstra språk (NL): 3.500 kr'
       ],
       perfectFor: [
-        'Profesjonell utleie',
-        'Internasjonale gjester',
+        'Profesjonell hytteutleie',
+        'Internasjonale gjester (tysktalende marked)',
         'Økt synlighet på Google'
       ],
       deliveryTime: '4-6 uker'
     },
     light: {
       name: 'Destinasjon Light',
-      price: '42.900 kr',
+      price: '49.900 kr',
       subtitle: 'For små reiselivsbedrifter',
-      description: 'For små reiselivsbedrifter med flere enheter. Fullstendig visuell identitet og booking-flyt.',
+      description: 'Den fullstendige digitale identiteten — for små reiselivsbedrifter med flere enheter og større ambisjoner.',
       pages: 'Inntil 25 sider',
       included: [
         'Alt fra Hytte Pluss',
         'Inntil 25 sider',
-        'Oversiktsside + individuelle enhetssider',
-        'Visuell identitet (logo + fargepalett)',
-        'Fullstendig booking-flyt',
-        'Betalingsintegrasjon (Stripe/Vipps)',
-        'Content Management System (CMS)',
+        'Oversiktsside + individuelle enhetssider (perfekt for flere hytter)',
+        'Visuell identitet (logo + fargepalett + typografi)',
+        'Fullstendig booking-flyt med tilgjengelighetskalender',
+        'Betalingsintegrasjon (Stripe/Vipps) inkludert',
+        'Content Management System (CMS) — oppdater selv uten koding',
         '3 revisjonsrunder',
-        'Prioritert support (3 mnd)'
+        'Prioritert support (3 måneder)',
+        'Månedlig ytelsesrapport (første 3 mnd)'
       ],
       notIncluded: [
-        'E-handel integrasjon',
-        'Egenutviklet booking-system'
+        'E-handelsløsning (produktsalg)',
+        'Avansert CRM-integrasjon'
       ],
       addons: [
         'Ekstra språk: 3.500 kr/språk',
-        'E-handel integrasjon: Pris på forespørsel'
+        'E-handelsintegrasjon: Pris på forespørsel',
+        'Avansert booking-system (egen løsning): Fra 15.000 kr'
       ],
       perfectFor: [
         'Små reiselivsbedrifter',
         'Flere enheter (2-10 hytter/leiligheter)',
-        'Egen merkevare'
+        'Egen merkevare og visuell identitet',
+        'Fullstendig kontroll og uavhengighet'
       ],
       deliveryTime: '6-10 uker'
     }
