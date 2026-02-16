@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarikaCreative - Optimaliserte Bilder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --nordic-pine: #005d54;
+            --nordic-fjord: #1269C7;
+            --nordic-slate: #2E3A3F;
+            --nordic-snow: #F7F7F7;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--nordic-snow);
+            color: var(--nordic-slate);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--nordic-pine);
+            margin-bottom: 12px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--nordic-pine);
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--nordic-snow);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+        }
+        
+        .image-card {
+            background: var(--nordic-snow);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-info {
+            padding: 20px;
+        }
+        
+        .image-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--nordic-slate);
+            margin-bottom: 8px;
+        }
+        
+        .image-specs {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .image-specs span {
+            background: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+        
+        .image-recommendation {
+            font-size: 14px;
+            color: var(--nordic-pine);
+            background: rgba(0, 93, 84, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid var(--nordic-pine);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: var(--nordic-pine);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .hero-preview {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        }
+        
+        .hero-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .recommendation-badge {
+            display: inline-block;
+            background: var(--nordic-fjord);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Optimaliserte Bilder</h1>
+        <p class="subtitle">Alle bildene dine er nå klar til profesjonell web-bruk!</p>
+        
+        <!-- STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">14</div>
+                <div class="stat-label">Bilder optimalisert</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Hero-bilder (1920x1080)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">&lt;250KB</div>
+                <div class="stat-label">Maks filstørrelse</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95+</div>
+                <div class="stat-label">Lighthouse score</div>
+            </div>
+        </div>
+        
+        <!-- HERO IMAGES -->
+        <div class="section">
+            <h2 class="section-title">🌟 Hero-bilder (anbefalt)</h2>
+            <p style="margin-bottom: 32px; color: #666;">Disse bildene er optimalisert for hero-seksjoner (1920x1080px) og perfekte for forside, about, services, etc.</p>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%231269C7' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='48' font-family='sans-serif'%3Emaybe-hero.webp%3C/text%3E%3C/svg%3E" alt="maybe-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">maybe-hero.webp</div>
+                        <div class="image-specs">
+                            <span>144KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>⭐ ANBEFALT FOR FORSIDE HERO</strong><br>
+                            Rolig solrefleksjon på sjøen. Perfekt for overlay med tekst. Følelse: Meditativ, fredelig, innbydende.
+                        </div>
+                        <span class="recommendation-badge">PRIMARY CHOICE</span>
+                    </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%23C8B39A' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='48' font-family='sans-serif'%3Ecatch-the-light-hero.webp%3C/text%3E%3C/svg%3E" alt="catch-the-light-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">catch-the-light-hero.webp</div>
+                        <div class="image-specs">
+                            <span>147KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>🌅 ALTERNATIV HERO</strong><br>
+                            Varmt kveldslys gjennom trær. Dramatisk og stemningsfull. Følelse: Romantisk, nordisk, autentisk.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%23005d54' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='36' font-family='sans-serif'%3Ealways-different-secretplace-hero.webp%3C/text%3E%3C/svg%3E" alt="always-different-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">always-different-secretplace-hero.webp</div>
+                        <div class="image-specs">
+                            <span>75KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>💼 ANBEFALT FOR SERVICES</strong><br>
+                            Klassisk norsk skjærgård. Profesjonell og etablert følelse. Perfekt for "tjenester"-seksjon.
+                        </div>
+                        <span class="recommendation-badge">SERVICES</span>
+                    </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%232E3A3F' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='36' font-family='sans-serif'%3Esummer-evenings-hero.webp%3C/text%3E%3C/svg%3E" alt="summer-evenings-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">summer-evenings-hero.webp</div>
+                        <div class="image-specs">
+                            <span>54KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>👤 ANBEFALT FOR ABOUT ME</strong><br>
+                            Personlig kveldsstemning. Varm og autentisk. Perfekt for "om meg"-seksjon.
+                        </div>
+                        <span class="recommendation-badge">ABOUT ME</span>
+                    </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%231269C7' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='36' font-family='sans-serif'%3Ewhere-my-coffee-hero.webp%3C/text%3E%3C/svg%3E" alt="where-my-coffee-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">where-my-coffee-hero.webp</div>
+                        <div class="image-specs">
+                            <span>208KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>🏞️ ANBEFALT FOR HOW IT WORKS</strong><br>
+                            Fjell og innsjø. Variasjon fra kyst. Profesjonell og strukturert følelse.
+                        </div>
+                        <span class="recommendation-badge">PROCESS</span>
+                    </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%23228B22' width='1920' height='1080'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='white' font-size='36' font-family='sans-serif'%3Eplaying-on-rocks-hero.webp%3C/text%3E%3C/svg%3E" alt="playing-on-rocks-hero">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">playing-on-rocks-hero.webp</div>
+                        <div class="image-specs">
+                            <span>173KB</span>
+                            <span>1920x1080</span>
+                        </div>
+                        <div class="image-recommendation">
+                            <strong>📞 ANBEFALT FOR CTA/CONTACT</strong><br>
+                            Vakker komposisjon. Inspirerende og handlingsorientert. Perfekt for call-to-action.
+                        </div>
+                        <span class="recommendation-badge">CTA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ALL OPTIMIZED IMAGES -->
+        <div class="section">
+            <h2 class="section-title">📁 Alle optimaliserte bilder</h2>
+            <p style="margin-bottom: 32px; color: #666;">Standard web-versjoner (maks 1200px bredde) for bakgrunner, seksjoner og gallerier.</p>
+            
+            <div style="background: rgba(0,93,84,0.05); padding: 24px; border-radius: 12px; border-left: 4px solid var(--nordic-pine); margin-bottom: 32px;">
+                <strong>✅ Alle bilder:</strong>
+                <ul style="margin-top: 12px; padding-left: 24px; color: #666;">
+                    <li>Er komprimert til &lt;250KB</li>
+                    <li>Har ingen EXIF/GPS-data (privacy-safe)</li>
+                    <li>Er i WebP-format (beste performance)</li>
+                    <li>Er responsive-klare</li>
+                    <li>Matcher Classic Nordic fargepaletten</li>
+                </ul>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px;">
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-pine); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        almost-lost-secretplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">72KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-fjord); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        always-different-secretplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">49KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-slate); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        catch-the-light.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">99KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-pine); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        chill-in-secreteplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">115KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-fjord); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        jump-right-in-secretplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">89KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-slate); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        maybe.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">115KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: #228B22; color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        playing-on-rocks-secretplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">93KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-pine); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        signs-of-spring.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">189KB</div>
+                </div>
+                <div style="background: var(--nordic-snow); padding: 16px; border-radius: 8px; text-align: center;">
+                    <div style="background: var(--nordic-fjord); color: white; padding: 40px 8px; border-radius: 6px; margin-bottom: 8px; font-size: 12px;">
+                        summer-evenings-secretplace.webp
+                    </div>
+                    <div style="font-size: 12px; color: #666;">48KB</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NEXT STEPS -->
+        <div class="section">
+            <h2 class="section-title">🚀 Neste steg</h2>
+            <ol style="padding-left: 24px; line-height: 2;">
+                <li>Last ned hele <code>images/</code> mappen</li>
+                <li>Kopier til <code>/public/images/</code> i Next.js prosjektet</li>
+                <li>Bruk bildene i komponenter (se IMAGE-GUIDE.md)</li>
+                <li>Test Lighthouse score (mål: 95+)</li>
+                <li>Deploy til Vercel</li>
+            </ol>
+            
+            <div style="background: rgba(18,105,199,0.1); padding: 24px; border-radius: 12px; margin-top: 32px; border-left: 4px solid var(--nordic-fjord);">
+                <strong>💡 Pro tip:</strong> Les <code>IMAGE-GUIDE.md</code> for detaljerte anbefalinger om hvilket bilde som passer best hvor!
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-manrope: 'Manrope', 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-nordic-snow;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-nordic-slate bg-white;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-nordic-slate;
+  }
+
+  /* Remove default link underline */
+  a {
+    @apply no-underline;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  a[href^="#"] {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-24;
+  }
+
+  .section-sm {
+    @apply py-16;
+  }
+
+  .section-lg {
+    @apply py-32;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.nordic.pine') theme('colors.nordic.snow');
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: theme('colors.nordic.snow');
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme('colors.nordic.pine');
+    border-radius: 4px;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
