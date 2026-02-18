@@ -35,17 +35,17 @@ export default function HomePage() {
         }}
         images={[
           {
-            src: "/images/hero/IMG_7901-hero.webp",
+            src: "/images/hero/wintersun_mountain_cabin.webp",
             alt: "Norsk fjellhytte i vintersetting med snø",
             priority: true
           },
           {
-            src: "/images/hero/20210721_145857-hero.webp",
+            src: "/images/hero/hoddevik_norway_hero.webp",
             alt: "Spektakulært norsk fjordlandskap med strand og grønne åser",
             priority: false
           },
           {
-            src: "/images/hero/9942.webp",
+            src: "/images/hero/DNT-guiding-mountains-hero.webp",
             alt: "DNT fjellskilt med turstier i norsk fjelllandskap",
             priority: false
           },
@@ -555,7 +555,7 @@ export default function HomePage() {
 
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/hero/IMG_0234-hero.webp"
+                src="/images/optimized/mountain_fall_norway.webp.webp"
                 alt="Norsk fjellhytte i vakker natur"
                 fill
                 className="object-cover"
