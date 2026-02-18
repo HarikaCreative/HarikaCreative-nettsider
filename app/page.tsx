@@ -35,7 +35,7 @@ export default function HomePage() {
         }}
         images={[
           {
-            src: "/images/hero/IMG_0234-hero.webp",
+            src: "/images/hero/IMG_7901-hero.webp",
             alt: "Norsk fjellhytte i vintersetting med snø",
             priority: true
           },
@@ -45,7 +45,7 @@ export default function HomePage() {
             priority: false
           },
           {
-            src: "/images/hero/DNT-mountain-sign-hero.webp",
+            src: "/images/hero/9942.webp",
             alt: "DNT fjellskilt med turstier i norsk fjelllandskap",
             priority: false
           },
