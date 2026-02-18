@@ -40,7 +40,7 @@ export default function HomePage() {
             priority: true
           },
           {
-            src: "/images/hero/hoddevik_norway_hero.webp",
+            src: "/images/hero/hoddevik-norway-hero.webp",
             alt: "Spektakulært norsk fjordlandskap med strand og grønne åser",
             priority: false
           },
@@ -555,8 +555,8 @@ export default function HomePage() {
 
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/optimized/mountain_fall_norway.webp.webp"
-                alt="Norsk fjellhytte i vakker natur"
+                src="/images/optimized/summer_mountain_norway.webp"
+                alt="Sommer i fjellet med vidda som åpner seg"
                 fill
                 className="object-cover"
               />
