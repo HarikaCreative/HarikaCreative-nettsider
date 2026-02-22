@@ -89,9 +89,14 @@ export default function RootLayout({
     <html lang="no" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body className="font-sans antialiased bg-white text-nordic-slate">
         <StructuredData />
-        <Navigation
-          logoText="Hárika Creative"
-          links={[
+<Navigation
+  logo={{
+    src: '/logo-small.png',
+    alt: 'Hárika Creative - Pixel in place',
+    width: 180,
+    height: 60
+  }}
+  links={[
             { label: 'Hjem', href: '/' },
             { label: 'Tjenester', href: '#services' },
             { label: 'Om meg', href: '#about' },
