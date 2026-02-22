@@ -50,10 +50,11 @@ const config: Config = {
         info: '#1269C7',
       },
       
-      fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
-      },
+ fontFamily: {
+  sans: ['var(--font-space-mono)', 'Courier New', 'monospace'],
+  display: ['var(--font-space-mono)', 'Courier New', 'monospace'],
+  mono: ['var(--font-space-mono)', 'Courier New', 'monospace'],
+},
       
       fontSize: {
         // Display sizes
