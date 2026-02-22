@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'webdesigner Asker',
     'nettside små hoteller Norge',
     'hyttebooking nettside',
-    'webdesign Viken'
+    'webdesign Viken',
     'SEO online Norge'
   ],
   authors: [{ name: 'Marianna' }],
