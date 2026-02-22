@@ -1,9 +1,15 @@
 import type { Metadata } from 'next'
-import { Space_Mono } from 'next/font/google'
+import { Space_Grotesk, Space_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation'
 import CookieConsent from '@/components/sections/CookieConsent'
 import StructuredData from '@/components/seo/StructuredData'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+})
 
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
@@ -73,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="no" className={spaceMono.variable}>
+    <html lang="no" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body className="font-sans antialiased bg-white text-nordic-slate">
         <StructuredData />
         <Navigation
