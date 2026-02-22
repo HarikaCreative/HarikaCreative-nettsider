@@ -93,8 +93,8 @@ export default function RootLayout({
   logo={{
     src: '/logo-small.png',
     alt: 'Hárika Creative - Pixel in place',
-    width: 140,
-    height: 47,
+    width: 50,
+    height: 50,
   }}
   links={[
             { label: 'Hjem', href: '/' },
