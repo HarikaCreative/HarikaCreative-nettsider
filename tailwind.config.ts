@@ -50,9 +50,9 @@ const config: Config = {
         info: '#1269C7',
       },
       
- fontFamily: {
+fontFamily: {
   sans: ['var(--font-space-mono)', 'Courier New', 'monospace'],
-  display: ['var(--font-space-mono)', 'Courier New', 'monospace'],
+  display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
   mono: ['var(--font-space-mono)', 'Courier New', 'monospace'],
 },
       
