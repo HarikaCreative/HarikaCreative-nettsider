@@ -69,29 +69,25 @@ const Navigation: React.FC<NavigationProps> = ({
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            {logo ? (
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width || 40}
-                height={logo.height || 40}
-                className="transition-transform group-hover:scale-105"
-              />
-            ) : (
-              <div className="w-10 h-10 bg-nordic-pine rounded-lg flex items-center justify-center">
-                <span className="text-white font-display font-bold text-xl">H</span>
-              </div>
-            )}
-            <span
-              className={cn(
-                'font-display font-bold text-xl transition-colors',
-                isScrolled ? 'text-nordic-pine' : 'text-white'
-              )}
-            >
-              {logoText}
-            </span>
-          </Link>
+         <Link href="/" className="flex items-center gap-3 group">
+  {logo && (
+    <Image
+      src={logo.src}
+      alt={logo.alt}
+      width={logo.width || 40}
+      height={logo.height || 40}
+      className="transition-transform group-hover:scale-105"
+    />
+  )}
+  <span
+    className={cn(
+      'font-mono font-bold text-xl transition-colors',
+      isScrolled ? 'text-nordic-pine' : 'text-white'
+    )}
+  >
+    {logoText}
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
