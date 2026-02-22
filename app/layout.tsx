@@ -1,19 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter, Manrope } from 'next/font/google'
+import { Space_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation'
 import CookieConsent from '@/components/sections/CookieConsent'
 import StructuredData from '@/components/seo/StructuredData'
 
-const inter = Inter({
+const spaceMono = Space_Mono({
+  weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
+  variable: '--font-space-mono',
   display: 'swap',
 })
 
@@ -78,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="no" className={`${inter.variable} ${manrope.variable}`}>
+    <html lang="no" className={spaceMono.variable}>
       <body className="font-sans antialiased bg-white text-nordic-slate">
         <StructuredData />
         <Navigation
