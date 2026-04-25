@@ -9,6 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // EN DESIGN SYSTEM
+        aegean: '#1e3d52',
+        terracotta: '#b85c38',
+        gold: '#c4923a',
+        ink: '#1c1c1c',
+
         // CLASSIC NORDIC PALETTE
         nordic: {
           // Primary - Main brand color
@@ -53,6 +59,7 @@ const config: Config = {
 fontFamily: {
   sans: ['var(--font-space-mono)', 'Courier New', 'monospace'],
   display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+  serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
   mono: ['var(--font-space-mono)', 'Courier New', 'monospace'],
 },
       

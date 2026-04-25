@@ -51,6 +51,35 @@
   }
 }
 
+/* ─── Klaro Cookie Consent ─────────────────────────────────── */
+:root {
+  --klaro-green-200: #005d54;
+  --klaro-green-300: #004840;
+  --klaro-border-radius: 4px;
+  --klaro-font-family: 'Inter', system-ui, sans-serif;
+}
+
+.klaro .cookie-notice {
+  bottom: 1.5rem !important;
+  left: 1.5rem !important;
+  right: 1.5rem !important;
+  max-width: 480px !important;
+  border-radius: 4px !important;
+}
+
+.klaro .cm-btn-success,
+.klaro .cm-btn-danger {
+  flex: 1 !important;
+  text-align: center !important;
+}
+
+.klaro .cm-btn-danger {
+  opacity: 1 !important;
+  background: transparent !important;
+  border: 1px solid #e2e2df !important;
+  color: #4a4a48 !important;
+}
+
 @layer utilities {
   /* Custom scrollbar */
   .scrollbar-thin {

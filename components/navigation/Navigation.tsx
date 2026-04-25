@@ -26,7 +26,6 @@ export interface NavigationProps {
     onClick?: () => void
   }
   locale?: string
-  onLocaleChange?: (locale: string) => void
   className?: string
 }
 
@@ -36,7 +35,6 @@ const Navigation: React.FC<NavigationProps> = ({
   links,
   ctaButton,
   locale = 'no',
-  onLocaleChange,
   className,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -50,11 +48,6 @@ const Navigation: React.FC<NavigationProps> = ({
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const toggleLocale = () => {
-    const newLocale = locale === 'no' ? 'en' : 'no'
-    onLocaleChange?.(newLocale)
-  }
 
   return (
     <nav
@@ -107,18 +100,15 @@ const Navigation: React.FC<NavigationProps> = ({
             ))}
 
             {/* Language Toggle */}
-            <button
-              onClick={toggleLocale}
+            <Link
+              href={locale === 'no' ? '/en' : '/'}
+              title={locale === 'no' ? 'English' : 'Norsk'}
               className={cn(
-                'flex items-center gap-2 font-medium transition-colors',
-                isScrolled
-                  ? 'text-nordic-slate hover:text-nordic-pine'
-                  : 'text-white/90 hover:text-white'
+                'text-2xl transition-opacity hover:opacity-60',
               )}
             >
-              <span className="text-sm">🇳🇴</span>
-              <span>{locale.toUpperCase()}</span>
-            </button>
+              {locale === 'no' ? '🇬🇧' : '🇳🇴'}
+            </Link>
 
             {/* CTA Button */}
             {ctaButton && (
@@ -180,15 +170,14 @@ const Navigation: React.FC<NavigationProps> = ({
                 </Link>
               ))}
               
-              <button
-                onClick={() => {
-                  toggleLocale()
-                  setIsMobileMenuOpen(false)
-                }}
-                className="text-nordic-slate hover:text-nordic-pine font-medium py-2 text-left"
+              <Link
+                href={locale === 'no' ? '/en' : '/'}
+                title={locale === 'no' ? 'English' : 'Norsk'}
+                className="text-2xl py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                🇳🇴 {locale.toUpperCase()}
-              </button>
+                {locale === 'no' ? '🇬🇧' : '🇳🇴'}
+              </Link>
 
               {ctaButton && (
                 <Button
