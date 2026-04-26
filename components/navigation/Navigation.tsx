@@ -109,7 +109,7 @@ const Navigation: React.FC<NavigationProps> = ({
               )}
             >
               <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
-              <span>{locale === 'no' ? 'EN' : 'NO'}</span>
+              <span>{locale === 'no' ? 'English' : 'Norsk'}</span>
             </Link>
 
             {/* CTA Button */}
@@ -179,7 +179,7 @@ const Navigation: React.FC<NavigationProps> = ({
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
-                <span>{locale === 'no' ? 'EN' : 'NO'}</span>
+                <span>{locale === 'no' ? 'English' : 'Norsk'}</span>
               </Link>
 
               {ctaButton && (

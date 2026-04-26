@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import EnContactForm from '@/components/sections/EnContactForm'
+import EnTestimonialCarousel from '@/components/sections/EnTestimonialCarousel'
 import CookieSettingsLink from '@/components/ui/CookieSettingsLink'
 
 export default function EnHomePage() {
@@ -37,7 +38,7 @@ export default function EnHomePage() {
               booking relationship.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center bg-aegean text-white px-8 py-4 font-semibold hover:bg-aegean/90 transition-colors"
@@ -51,15 +52,6 @@ export default function EnHomePage() {
                 See packages
               </a>
             </div>
-
-            <blockquote className="border-l-2 border-gold pl-6">
-              <p className="text-body-md text-ink/70 italic mb-2">
-                &ldquo;Marianna handles everything with precision and care. We feel confident even when we are far away.&rdquo;
-              </p>
-              <cite className="text-body-sm text-ink/50 not-italic">
-                Elisabeth &amp; Bernt Giil — Anasa Retreat Crete
-              </cite>
-            </blockquote>
           </div>
         </section>
 
@@ -387,31 +379,16 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* ── REFERENCE ─────────────────────────────────────────── */}
-        <section className="py-24 bg-aegean/10 text-center">
-          <div className="container mx-auto px-6 max-w-3xl">
-            <blockquote className="mb-8">
-              <p className="font-serif text-h3 text-aegean italic leading-relaxed mb-6">
-                &ldquo;Working with Marianna was a relief. She understood what we were trying
-                to create at Anasa, translated it into a website that genuinely represents
-                our retreat, and managed the whole process with precision and warmth.
-                Highly recommended.&rdquo;
-              </p>
-              <cite className="text-body-md text-ink/60 not-italic">
-                Elisabeth &amp; Bernt Giil — Anasa Retreat Crete
-              </cite>
-            </blockquote>
-            <a
-              href="https://anasaretreatcrete.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-aegean font-semibold hover:underline"
-            >
-              Visit anasaretreatcrete.com
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+        {/* ── TESTIMONIALS ──────────────────────────────────────── */}
+        <section className="py-24 bg-aegean">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <p className="font-mono text-body-xs text-gold uppercase tracking-widest mb-4">What clients say</p>
+              <h2 className="font-serif text-h1 text-white">
+                Built on trust. Delivered with precision.
+              </h2>
+            </div>
+            <EnTestimonialCarousel />
           </div>
         </section>
 

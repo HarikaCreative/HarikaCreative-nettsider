@@ -68,8 +68,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
               title="Norsk"
               className="flex items-center gap-1.5 font-mono text-sm font-semibold text-ink/60 hover:text-ink transition-colors"
             >
-              <span className="text-lg">🇳🇴</span>
-              <span>NO</span>
+              🇳🇴 Norsk
             </Link>
             <a
               href="/en#contact"
