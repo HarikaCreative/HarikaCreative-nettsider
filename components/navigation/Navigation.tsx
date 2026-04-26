@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import Button from '@/components/ui/Button'
+import GB from 'country-flag-icons/react/3x2/GB'
+import NO from 'country-flag-icons/react/3x2/NO'
 
 export interface NavLink {
   label: string
@@ -102,14 +104,16 @@ const Navigation: React.FC<NavigationProps> = ({
             {/* Language Toggle */}
             <Link
               href={locale === 'no' ? '/en' : '/'}
-              title={locale === 'no' ? 'English' : 'Norsk'}
+              aria-label={locale === 'no' ? 'Switch to English' : 'Bytt til norsk'}
               className={cn(
                 'flex items-center gap-1.5 font-mono text-sm font-semibold transition-opacity hover:opacity-60',
                 isScrolled ? 'text-nordic-slate' : 'text-white/90'
               )}
             >
-              <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
-              <span>{locale === 'no' ? 'English' : 'Norsk'}</span>
+              {locale === 'no'
+                ? <><GB className="inline-block w-5 h-4" /><span>English</span></>
+                : <><NO className="inline-block w-5 h-4" /><span>Norsk</span></>
+              }
             </Link>
 
             {/* CTA Button */}
@@ -174,12 +178,14 @@ const Navigation: React.FC<NavigationProps> = ({
               
               <Link
                 href={locale === 'no' ? '/en' : '/'}
-                title={locale === 'no' ? 'English' : 'Norsk'}
+                aria-label={locale === 'no' ? 'Switch to English' : 'Bytt til norsk'}
                 className="flex items-center gap-2 font-mono text-sm font-semibold text-nordic-slate py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
-                <span>{locale === 'no' ? 'English' : 'Norsk'}</span>
+                {locale === 'no'
+                  ? <><GB className="inline-block w-5 h-4" /><span>English</span></>
+                  : <><NO className="inline-block w-5 h-4" /><span>Norsk</span></>
+                }
               </Link>
 
               {ctaButton && (

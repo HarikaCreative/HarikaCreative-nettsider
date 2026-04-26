@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond } from 'next/font/google'
 import Link from 'next/link'
 import Image from 'next/image'
+import NO from 'country-flag-icons/react/3x2/NO'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -65,10 +66,11 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
             <a href="/en#contact" className="text-ink/70 hover:text-ink transition-colors">Contact</a>
             <Link
               href="/"
-              title="Norsk"
+              aria-label="Bytt til norsk"
               className="flex items-center gap-1.5 font-mono text-sm font-semibold text-ink/60 hover:text-ink transition-colors"
             >
-              🇳🇴 Norsk
+              <NO className="inline-block w-5 h-4" />
+              <span>Norsk</span>
             </Link>
             <a
               href="/en#contact"
