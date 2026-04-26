@@ -25,7 +25,7 @@ export default function EnHomePage() {
           {/* Text — RIGHT */}
           <div className="order-1 lg:order-2 flex flex-col justify-center px-8 md:px-16 py-24 bg-white">
             <p className="font-mono text-body-xs text-terracotta uppercase tracking-widest mb-6">
-              Bespoke websites · Greece &amp; Crete
+              Bespoke websites · Crete &amp; Greece
             </p>
 
             <h1 className="font-serif text-display-lg text-ink leading-tight mb-6">
@@ -35,7 +35,8 @@ export default function EnHomePage() {
             <p className="text-body-lg text-ink/70 mb-10 max-w-md">
               I build handcrafted websites for villa owners in Crete and Greece.
               Attract the right guests, reduce platform fees, and own your
-              booking relationship.
+              booking relationship. If you already have a website and are
+              curious — send a message.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -107,8 +108,8 @@ export default function EnHomePage() {
                     body: 'Wellness retreats, boutique stays, and nature escapes deserve a website that communicates their ethos.',
                   },
                   {
-                    title: 'Scandinavian owners abroad',
-                    body: 'I understand both cultures. I speak Norwegian, think in Scandinavian design principles, and know the Greek hospitality market.',
+                    title: 'Scandinavian and international owners abroad',
+                    body: 'Norwegian, Swedish, Danish or international — you bought your dream property in Crete or Greece. I understand both the Northern European mindset and the Mediterranean market, and communicate clearly across cultures.',
                   },
                 ].map(({ title, body }) => (
                   <div key={title} className="bg-white p-6 border-l-2 border-gold">
@@ -379,16 +380,18 @@ export default function EnHomePage() {
                   <div>
                     <p className="font-medium text-sm text-[#1c1c1c] mb-1">Accessibility (WCAG 2.1 AA)</p>
                     <p className="text-sm text-[#4a4a48] leading-relaxed">
-                      Legal requirement in Norway and the EU — we check compliance.
+                      Universal design means everyone can use your site — including guests
+                      with visual or motor impairments. Required by Norwegian and EU law.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start py-4">
                   <span className="text-lg flex-shrink-0">🛠️</span>
                   <div>
-                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">Technical improvements</p>
+                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">Technical improvements &amp; GDPR</p>
                     <p className="text-sm text-[#4a4a48] leading-relaxed">
-                      Outdated code, security gaps and missing GDPR compliance.
+                      Outdated code, security vulnerabilities and missing GDPR compliance —
+                      identified and fixed.
                     </p>
                   </div>
                 </div>
@@ -414,14 +417,14 @@ export default function EnHomePage() {
                 </h2>
                 <div className="space-y-4 text-body-lg text-white/80 mb-8">
                   <p>
-                    I&apos;m Marianna — a web designer with Norwegian roots, a Greek surname,
-                    and a deep understanding of what villa owners in Greece and Crete need
-                    from a digital presence.
+                    I&apos;m Marianna — Greek-Norwegian, and genuinely at home in both countries.
+                    My background spans hospitality, marketing and web design, and I bring
+                    all of it to every project.
                   </p>
                   <p>
-                    After years working in hospitality across both countries, I know what
-                    guests expect and what owners want to communicate. My process is
-                    structured, my communication is clear, and I always deliver what I promise.
+                    I know what guests expect from a villa rental — and I&apos;ll help you
+                    communicate exactly that. I work with integrity, stay structured and
+                    keep you informed throughout.
                   </p>
                 </div>
 
@@ -487,7 +490,7 @@ export default function EnHomePage() {
             <div>
               <h3 className="font-serif text-xl font-semibold mb-4">Hárika Creative</h3>
               <p className="text-sm text-white/70 leading-relaxed">
-                Bespoke websites for villa owners in Greece and Crete.
+                Bespoke websites for villa owners in Crete and Greece.
               </p>
             </div>
 
@@ -513,7 +516,7 @@ export default function EnHomePage() {
           </div>
 
           <div className="border-t border-white/10 pt-8 text-center text-sm text-white/50">
-            <p>© 2026 Hárika Creative med M. Xiros Villard · Reg. no. 937 310 447 · Asker, Norway</p>
+            <p>© 2026 Hárika Creative · Reg. no. 937 310 447</p>
           </div>
         </div>
       </footer>

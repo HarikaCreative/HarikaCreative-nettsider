@@ -475,18 +475,20 @@ export default function HomePage() {
               <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
                 <span className="text-lg flex-shrink-0">♿</span>
                 <div>
-                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Tilgjengelighet (WCAG)</p>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Tilgjengelighet (WCAG 2.1 AA)</p>
                   <p className="text-sm text-[#4a4a48] leading-relaxed">
-                    Lovpålagt og viktig — vi sjekker at alle kan bruke siden din.
+                    Universell utforming betyr at alle kan bruke siden din — inkludert
+                    gjester med nedsatt syn eller motorikk. Lovpålagt i Norge og EU.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4 items-start py-4">
                 <span className="text-lg flex-shrink-0">🛠️</span>
                 <div>
-                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Teknisk opprydding</p>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Teknisk opprydding og GDPR</p>
                   <p className="text-sm text-[#4a4a48] leading-relaxed">
-                    Utdatert kode, sikkerhetssvakheter og manglende GDPR-compliance.
+                    Utdatert kode, sikkerhetssvakheter og manglende GDPR-compliance —
+                    identifisert og fikset.
                   </p>
                 </div>
               </div>
@@ -603,36 +605,20 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-body-lg opacity-90 mb-8">
                 <p>
-                  Jeg heter Marianna, og jeg hjelper hytteeiere og små reiselivsbedrifter over hele Norge med å skape nettsider som både ser vakre ut og faktisk fungerer.
+                  Jeg er Marianna — gresk-norsk, med hjertet i to land.
                 </p>
                 <p>
-                  Med bakgrunn fra digital markedsføring (Noroff, 2020–2022), utleie og service fra både Norge og Hellas, forstår jeg hva som skal til for å lage nettsider som gjør jobben sin — ikke bare fyller en plass på nettet.
+                  Med bakgrunn fra reiseliv, markedsføring og selvlært webdesign forstår jeg
+                  både hva gjester leter etter og hva eiere ønsker å formidle. Jeg hjelper
+                  deg å kommunisere stedet ditt på en måte som skaper tillit — og bookinger.
                 </p>
                 <p>
-                  For meg handler en god nettside om mer enn design:
-                </p>
-                <ul className="space-y-2 ml-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-nordic-forest-light mt-1">✓</span>
-                    <span>Den skal gi trygghet (gjestene føler seg trygge på å booke)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-nordic-forest-light mt-1">✓</span>
-                    <span>Den skal skape tillit (profesjonell og pålitelig)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-nordic-forest-light mt-1">✓</span>
-                    <span>Den skal være enkel (både for deg og gjestene dine)</span>
-                  </li>
-                </ul>
-                <p>
-                  Jeg jobber strukturert, kommuniserer tydelig og leverer alltid det jeg lover — noe kundene mine setter stor pris på.
+                  Jeg kommuniserer mye og gjerne, og du vet alltid hvor vi er i prosessen.
+                  Jeg jobber strukturert, leverer det jeg lover og setter stor pris på åpen
+                  dialog begge veier.
                 </p>
                 <p className="font-semibold">
-                  Målet mitt er enkelt: Å gjøre ditt sted synlig, troverdig og enkelt å booke.
-                </p>
-                <p className="text-body-md opacity-75">
-                  Basert i Asker, jobber jeg med hytteeiere og reiselivsbedrifter i hele Norge.
+                  Målet er enkelt: å gjøre ditt sted synlig, troverdig og enkelt å booke.
                 </p>
               </div>
 
