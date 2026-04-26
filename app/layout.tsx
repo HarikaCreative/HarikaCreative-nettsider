@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Mono } from 'next/font/google'
+import { Jost, Space_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation/Navigation'
 import KlaroConsent from '@/components/sections/KlaroConsent'
@@ -8,9 +8,10 @@ import StructuredData from '@/components/seo/StructuredData'
 import NorwegianChrome from '@/components/layout/NorwegianChrome'
 import Script from 'next/script'
 
-const inter = Inter({
+const jost = Jost({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-jost',
   display: 'swap',
 })
 
@@ -93,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="no" className={`${inter.variable} ${spaceMono.variable}`}>
+    <html lang="no" className={`${jost.variable} ${spaceMono.variable}`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TFBLHK6VB0"

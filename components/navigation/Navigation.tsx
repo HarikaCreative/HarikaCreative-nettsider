@@ -104,10 +104,12 @@ const Navigation: React.FC<NavigationProps> = ({
               href={locale === 'no' ? '/en' : '/'}
               title={locale === 'no' ? 'English' : 'Norsk'}
               className={cn(
-                'text-2xl transition-opacity hover:opacity-60',
+                'flex items-center gap-1.5 font-mono text-sm font-semibold transition-opacity hover:opacity-60',
+                isScrolled ? 'text-nordic-slate' : 'text-white/90'
               )}
             >
-              {locale === 'no' ? '🇬🇧' : '🇳🇴'}
+              <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
+              <span>{locale === 'no' ? 'EN' : 'NO'}</span>
             </Link>
 
             {/* CTA Button */}
@@ -173,10 +175,11 @@ const Navigation: React.FC<NavigationProps> = ({
               <Link
                 href={locale === 'no' ? '/en' : '/'}
                 title={locale === 'no' ? 'English' : 'Norsk'}
-                className="text-2xl py-2"
+                className="flex items-center gap-2 font-mono text-sm font-semibold text-nordic-slate py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {locale === 'no' ? '🇬🇧' : '🇳🇴'}
+                <span className="text-lg">{locale === 'no' ? '🇬🇧' : '🇳🇴'}</span>
+                <span>{locale === 'no' ? 'EN' : 'NO'}</span>
               </Link>
 
               {ctaButton && (

@@ -8,9 +8,13 @@ export default function StructuredData() {
     name: 'Hárika Creative',
     alternateName: 'Harika Creative',
     url: 'https://harikacreative.com',
-    logo: 'https://harikacreative.com/logo.png',
-    description: 'Profesjonelle nettsider for private hytteeiere og små reiselivsbedrifter i Norge. Spesialisert i nordisk design, booking-løsninger og SEO-optimalisering.',
+    logo: 'https://harikacreative.com/logo-small.png',
+    description: 'Nettsider for norske hytteeiere og små reiselivsbedrifter',
     email: 'hello@harikacreative.com',
+    founder: {
+      '@type': 'Person',
+      name: 'Marianna Xiros Villard',
+    },
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Asker',
@@ -22,34 +26,15 @@ export default function StructuredData() {
       latitude: 59.8333,
       longitude: 10.4333,
     },
-    areaServed: [
-      {
-        '@type': 'Country',
-        name: 'Norge',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Viken',
-      },
-      {
-        '@type': 'AdministrativeArea', 
-        name: 'Oslo',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Vestland',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Trøndelag',
-      },
-    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'hello@harikacreative.com',
+      contactType: 'customer service',
+    },
+    areaServed: ['NO', 'GR'],
+    vatID: '937310447',
     serviceType: 'Web Design & Development',
     priceRange: '14900-49900 NOK',
-    founder: {
-      '@type': 'Person',
-      name: 'Marianna',
-    },
     knowsAbout: [
       'Web Design',
       'Web Development',
@@ -58,6 +43,7 @@ export default function StructuredData() {
       'Booking Systems',
       'Norwegian Tourism',
       'Cabin Rental Marketing',
+      'Villa Websites Greece',
     ],
   }
 
@@ -69,56 +55,22 @@ export default function StructuredData() {
         '@type': 'Service',
         name: 'Hytte Basic',
         description: 'Den rene, profesjonelle nettsiden — perfekt for deg som vil ha noe enkelt som fungerer.',
-        provider: {
-          '@id': 'https://harikacreative.com/#organization',
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '14900',
-          priceCurrency: 'NOK',
-          availability: 'https://schema.org/InStock',
-        },
+        provider: { '@id': 'https://harikacreative.com/#organization' },
+        offers: { '@type': 'Offer', price: '14900', priceCurrency: 'NOK' },
       },
       {
         '@type': 'Service',
         name: 'Hytte Pluss',
         description: 'Den komplette løsningen — for deg som ønsker mer funksjonalitet, bedre synlighet og booking.',
-        provider: {
-          '@id': 'https://harikacreative.com/#organization',
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '24900',
-          priceCurrency: 'NOK',
-          availability: 'https://schema.org/InStock',
-        },
+        provider: { '@id': 'https://harikacreative.com/#organization' },
+        offers: { '@type': 'Offer', price: '24900', priceCurrency: 'NOK' },
       },
       {
         '@type': 'Service',
         name: 'Destinasjon Light',
-        description: 'Den fullstendige digitale identiteten — for små reiselivsbedrifter med flere enheter og større ambisjoner.',
-        provider: {
-          '@id': 'https://harikacreative.com/#organization',
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '49900',
-          priceCurrency: 'NOK',
-          availability: 'https://schema.org/InStock',
-        },
-      },
-    ],
-  }
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Hjem',
-        item: 'https://harikacreative.com',
+        description: 'Den fullstendige digitale identiteten — for små reiselivsbedrifter.',
+        provider: { '@id': 'https://harikacreative.com/#organization' },
+        offers: { '@type': 'Offer', price: '49900', priceCurrency: 'NOK' },
       },
     ],
   }
@@ -134,11 +86,6 @@ export default function StructuredData() {
         id="services-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-      />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   )

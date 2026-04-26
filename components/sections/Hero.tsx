@@ -162,7 +162,7 @@ const Hero: React.FC<HeroProps> = ({
 
             {/* Right - Image */}
             <div 
-              className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl animate-scale-in group"
+              className="relative h-[400px] lg:h-[600px] overflow-hidden shadow-2xl animate-scale-in group"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}

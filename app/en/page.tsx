@@ -54,8 +54,7 @@ export default function EnHomePage() {
 
             <blockquote className="border-l-2 border-gold pl-6">
               <p className="text-body-md text-ink/70 italic mb-2">
-                &ldquo;Marianna handles everything with precision and care. Our website
-                doubled direct enquiries within three months.&rdquo;
+                &ldquo;Marianna handles everything with precision and care. We feel confident even when we are far away.&rdquo;
               </p>
               <cite className="text-body-sm text-ink/50 not-italic">
                 Elisabeth &amp; Bernt Giil — Anasa Retreat Crete
@@ -175,31 +174,17 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* ── DETAIL IMAGES ─────────────────────────────────────── */}
-        <section className="grid md:grid-cols-2">
-          <div className="relative aspect-[4/3]">
-            <Image
-              src="/images/en/greek-white-arch-door-sea-view-detail.webp"
-              alt="White-washed stone arch doorway with Aegean Sea view, Greek island architecture"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1.5 text-xs">
-              <span>Greek island terrace · Aegean Sea</span>
-              <span className="block text-white/60 text-[10px]">Image by Freepik</span>
-            </div>
-          </div>
-          <div className="relative aspect-[4/3]">
-            <Image
-              src="/images/en/greek-island-orange-citrus-terrace-balcony.webp"
-              alt="Mediterranean balcony with orange citrus trees overlooking Greek island view"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1.5 text-xs">
-              <span>Mediterranean detail · Greek islands</span>
-              <span className="block text-white/60 text-[10px]">Image by Freepik</span>
-            </div>
+        {/* ── DETAIL IMAGE ──────────────────────────────────────── */}
+        <section className="relative aspect-[16/6]">
+          <Image
+            src="/images/en/greek-white-arch-door-sea-view-detail.webp"
+            alt="White-washed stone arch doorway with Aegean Sea view, Greek island architecture"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1.5 text-xs text-right">
+            <span>Greek island terrace · Aegean Sea</span>
+            <span className="block text-white/60 text-[10px]">Image by Freepik</span>
           </div>
         </section>
 
@@ -390,16 +375,13 @@ export default function EnHomePage() {
                 </ul>
               </div>
 
-              {/* Photo placeholder — add /images/en/Marianna.webp when available */}
-              <div className="relative h-96 rounded-sm overflow-hidden bg-aegean/50 flex items-center justify-center">
-                <div className="text-center text-white/40">
-                  <div className="w-24 h-24 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-body-sm">Add Marianna.webp to /images/en/</p>
-                </div>
+              <div className="relative h-96 overflow-hidden">
+                <Image
+                  src="/images/en/greek-island-orange-citrus-terrace-balcony.webp"
+                  alt="Small orange citrus tree in terracotta pot on a Greek island balcony overlooking the Aegean Sea — Mediterranean atmosphere"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

@@ -55,6 +55,25 @@ export default function HomePage() {
         className="mb-0"
       />
 
+      {/* METRICS BAR */}
+      <section className="bg-nordic-slate text-white py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {[
+              { stat: '15–25%', label: 'Provisjon spart' },
+              { stat: 'Topp 10', label: 'Google-mål' },
+              { stat: '< 2 sek', label: 'Lastetid' },
+              { stat: '100%', label: 'GDPR-compliant' },
+            ].map(({ stat, label }) => (
+              <div key={stat}>
+                <p className="text-display-md font-display text-nordic-forest-light mb-2">{stat}</p>
+                <p className="text-body-sm text-white/70">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* WHY YOU NEED A WEBSITE */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -553,7 +572,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative h-96 rounded-lg overflow-hidden">
+            <div className="relative h-96 overflow-hidden">
               <Image
                 src="/images/optimized/summer_mountain_norway.webp"
                 alt="Sommer i fjellet med vidda som åpner seg"
