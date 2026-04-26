@@ -380,11 +380,11 @@ export default function EnHomePage() {
         </section>
 
         {/* ── TESTIMONIALS ──────────────────────────────────────── */}
-        <section className="py-24 bg-aegean">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <p className="font-mono text-body-xs text-gold uppercase tracking-widest mb-4">What clients say</p>
-              <h2 className="font-serif text-h1 text-white">
+            <div className="text-center mb-16">
+              <p className="font-mono text-body-xs text-terracotta uppercase tracking-widest mb-4">What clients say</p>
+              <h2 className="font-serif text-h1 text-aegean">
                 Built on trust. Delivered with precision.
               </h2>
             </div>
