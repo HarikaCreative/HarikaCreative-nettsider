@@ -429,6 +429,79 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* EKSISTERENDE NETTSIDE */}
+      <section className="py-20 px-12 bg-[#f7f3ee]">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="font-mono text-xs tracking-widest uppercase text-[#b85c38] mb-5">
+              Eksisterende nettside
+            </p>
+            <h2 className="font-serif text-3xl font-light leading-tight text-[#1c1c1c] mb-5">
+              Har du allerede en nettside?
+            </h2>
+            <div className="w-9 h-0.5 bg-[#b85c38] mb-6" />
+            <p className="text-base font-light leading-relaxed text-[#4a4a48] mb-4">
+              Ikke alle trenger en ny nettside fra bunnen av. Kanskje det som trengs
+              er friske øyne, bedre synlighet på Google, eller noen tekniske
+              forbedringer som gjør en stor forskjell.
+            </p>
+            <p className="text-base font-light leading-relaxed text-[#4a4a48]">
+              Jeg tilbyr gjennomgang og forbedring av eksisterende nettsider —
+              SEO-analyse, hastighetsoptimalisering, tilgjengelighet og teknisk
+              opprydding.
+            </p>
+          </div>
+
+          <div>
+            <div className="flex flex-col gap-0">
+              <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                <span className="text-lg flex-shrink-0">🔍</span>
+                <div>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">SEO-gjennomgang</p>
+                  <p className="text-sm text-[#4a4a48] leading-relaxed">
+                    Hvordan ranker siden din i dag — og hva skal til for å klatre?
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                <span className="text-lg flex-shrink-0">⚡</span>
+                <div>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Hastighet og ytelse</p>
+                  <p className="text-sm text-[#4a4a48] leading-relaxed">
+                    Treg nettside mister gjester. Vi analyserer og forbedrer lastetid.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                <span className="text-lg flex-shrink-0">♿</span>
+                <div>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Tilgjengelighet (WCAG)</p>
+                  <p className="text-sm text-[#4a4a48] leading-relaxed">
+                    Lovpålagt og viktig — vi sjekker at alle kan bruke siden din.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start py-4">
+                <span className="text-lg flex-shrink-0">🛠️</span>
+                <div>
+                  <p className="font-medium text-sm text-[#1c1c1c] mb-1">Teknisk opprydding</p>
+                  <p className="text-sm text-[#4a4a48] leading-relaxed">
+                    Utdatert kode, sikkerhetssvakheter og manglende GDPR-compliance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              className="inline-block mt-8 bg-[#1e3d52] text-white px-8 py-3 text-xs font-mono tracking-widest uppercase hover:bg-[#1c1c1c] transition-colors"
+            >
+              Ta en uforpliktende prat
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="py-24 bg-white relative">
         <div className="absolute inset-0 z-0 opacity-5">
@@ -525,7 +598,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div>
-              <h2 className="text-h2 font-display mb-6">
+              <h2 className="text-h2 font-display text-white mb-6">
                 Om meg
               </h2>
               <div className="space-y-4 text-body-lg opacity-90 mb-8">

@@ -331,12 +331,85 @@ export default function EnHomePage() {
           </div>
         </section>
 
+        {/* ── EXISTING WEBSITE ──────────────────────────────────── */}
+        <section className="py-20 px-12 bg-[#f7f3ee]">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="font-mono text-xs tracking-widest uppercase text-[#b85c38] mb-5">
+                Existing website
+              </p>
+              <h2 className="font-serif text-3xl font-light leading-tight text-[#1c1c1c] mb-5">
+                Already have a website?
+              </h2>
+              <div className="w-9 h-0.5 bg-[#b85c38] mb-6" />
+              <p className="text-base font-light leading-relaxed text-[#4a4a48] mb-4">
+                Sometimes a new site isn&apos;t what&apos;s needed — just better visibility,
+                faster loading, or a cleaner structure that actually converts visitors
+                into guests.
+              </p>
+              <p className="text-base font-light leading-relaxed text-[#4a4a48]">
+                I offer analysis and improvement of existing websites — SEO review,
+                performance optimisation, accessibility compliance and technical
+                improvements.
+              </p>
+            </div>
+
+            <div>
+              <div className="flex flex-col gap-0">
+                <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                  <span className="text-lg flex-shrink-0">🔍</span>
+                  <div>
+                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">SEO review</p>
+                    <p className="text-sm text-[#4a4a48] leading-relaxed">
+                      How does your site rank today — and what would move the needle?
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                  <span className="text-lg flex-shrink-0">⚡</span>
+                  <div>
+                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">Performance &amp; speed</p>
+                    <p className="text-sm text-[#4a4a48] leading-relaxed">
+                      A slow website loses guests before they read a word.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-start py-4 border-b border-[#e2e2df]">
+                  <span className="text-lg flex-shrink-0">♿</span>
+                  <div>
+                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">Accessibility (WCAG 2.1 AA)</p>
+                    <p className="text-sm text-[#4a4a48] leading-relaxed">
+                      Legal requirement in Norway and the EU — we check compliance.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-start py-4">
+                  <span className="text-lg flex-shrink-0">🛠️</span>
+                  <div>
+                    <p className="font-medium text-sm text-[#1c1c1c] mb-1">Technical improvements</p>
+                    <p className="text-sm text-[#4a4a48] leading-relaxed">
+                      Outdated code, security gaps and missing GDPR compliance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="/en#contact"
+                className="inline-block mt-8 bg-[#1e3d52] text-white px-8 py-3 text-xs font-mono tracking-widest uppercase hover:bg-[#1c1c1c] transition-colors"
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── ABOUT ────────────────────────────────────────────── */}
         <section className="py-24 bg-aegean text-white">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
               <div>
-                <h2 className="font-serif text-h1 mb-6">
+                <h2 className="font-serif text-h1 text-white mb-6">
                   Norwegian precision. Mediterranean soul.
                 </h2>
                 <div className="space-y-4 text-body-lg text-white/80 mb-8">

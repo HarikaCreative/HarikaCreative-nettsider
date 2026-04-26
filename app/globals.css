@@ -15,9 +15,9 @@
     @apply text-nordic-slate bg-white;
   }
 
-  /* Typography defaults */
+  /* Typography defaults — no default color; headings inherit from parent */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-nordic-slate;
+    @apply font-display;
   }
 
   /* Remove default link underline */
