@@ -120,9 +120,9 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-h5 font-display text-nordic-slate mb-3">Internasjonale gjester</h3>
-              <p className="text-body-xs text-nordic-forest/60 font-semibold mb-2">3 språk inkludert</p>
+              <p className="text-body-xs text-nordic-forest/60 font-semibold mb-2">2 språk inkludert</p>
               <p className="text-body-md text-nordic-slate/70">
-                Engelsktalende og tysktalende gjester får informasjonen de trenger — i tillegg til norsk side.
+                Engelsktalende gjester får informasjonen de trenger — i tillegg til norsk side. Flere språk tilgjengelig mot tillegg.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function HomePage() {
                     <svg className="w-5 h-5 text-nordic-forest-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body-sm">3 språk: NO + EN + DE</span>
+                    <span className="text-body-sm">2 språk: NO + EN</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-nordic-forest-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
