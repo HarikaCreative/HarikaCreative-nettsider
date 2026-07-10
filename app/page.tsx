@@ -24,7 +24,7 @@ export default function HomePage() {
       <Hero
         title="Fra gjemt perle til gjestenes førstevalg"
         subtitle="Hárika Creative"
-        description="Din hytte fortjener en nettside som viser frem det den virkelig er — ikke bare et sted å sove, men med opplevelser verdt å huske. Jeg lager nettsider for norske hytter og feriehus som både ser vakre ut OG får gjestene til å booke."
+        description="Ditt ferieparadis fortjener en nettside som viser frem det stedet virkelig er — ikke bare et sted å sove, men med autensitet og opplevelser verdt å huske. Jeg lager nettsider for norske feriehjem, hytter og villaer som ser tiltalende ut og gir gjestene lyst til å ta kontakt."
         primaryCTA={{
           text: "Ta en uforpliktende prat",
           href: "#contact"
@@ -448,7 +448,8 @@ export default function HomePage() {
             <p className="text-base font-light leading-relaxed text-[#4a4a48]">
               Jeg tilbyr gjennomgang og forbedring av eksisterende nettsider —
               SEO-analyse, hastighetsoptimalisering, tilgjengelighet og teknisk
-              opprydding.
+              opprydding. Jeg kan gi en analyse av tilstedeværelse for tilsvarende utleieobjekter
+              på sosiale medier og komme med en enkel plan for hvordan du selv kan synliggjøre ditt sted.
             </p>
           </div>
 
@@ -586,7 +587,9 @@ export default function HomePage() {
                     Du går live
                   </h3>
                   <p className="text-body-md text-nordic-slate/70">
-                    Nettsiden publiseres, gjestene begynner å finne deg og bookingene starter. Jeg er tilgjengelig for support og spørsmål — du er aldri alene.
+                    Nettsiden publiseres og du kan dele et godt produkt med venner og kjente.
+                    Etter hvert kommer forespørslene fra potensielle leietakere.
+                    Jeg er tilgjengelig for support og spørsmål — du er aldri alene.
                   </p>
                 </div>
               </div>
@@ -608,17 +611,16 @@ export default function HomePage() {
                   Jeg er Marianna — gresk-norsk, med hjertet i to land.
                 </p>
                 <p>
-                  Med bakgrunn fra reiseliv, markedsføring og selvlært webdesign forstår jeg
-                  både hva gjester leter etter og hva eiere ønsker å formidle. Jeg hjelper
-                  deg å kommunisere stedet ditt på en måte som skaper tillit — og bookinger.
+                  Med bakgrunn fra reiseliv og hospitality, markedsføring og webdesign forstår jeg
+                  både hva gjester leter etter og hva eiere ønsker å formidle.
+                  Jeg hjelper deg å presentere stedet ditt med autensitet på en måte som skaper tillit.
                 </p>
                 <p>
-                  Jeg kommuniserer mye og gjerne, og du vet alltid hvor vi er i prosessen.
                   Jeg jobber strukturert, leverer det jeg lover og setter stor pris på åpen
-                  dialog begge veier.
+                  dialog begge veier. 
                 </p>
                 <p className="font-semibold">
-                  Målet er enkelt: å gjøre ditt sted synlig, troverdig og enkelt å booke.
+                  Målet er enkelt: å gjøre ditt sted synlig, tiltalende, troverdig og enkelt å booke.
                 </p>
               </div>
 
